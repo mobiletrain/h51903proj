@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Single</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/css/style.css" rel='stylesheet' type='text/css' />
+<link href="/css/etalage.css" rel="stylesheet">
+<link href="/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script src="/libs/requirejs/require.js" data-main="/js/detail"></script>
+<style type="text/css">
+	.active {
+		display: inline-block;
+		border: 2px solid #f00;
+	}
+</style>
+</head>
+<body>
+<div class="wrap">	
+<div class="container">
+	<!-- 头部 -->
+      <header></header>
+<div class="content">
+  <div class="content_box detail_box">
+	
+     <h4 class="head_single">推荐相关商品</h4>
+             <div class="single_span_3">
+	          	 <div class="col-sm-3 span_4">
+	          	     <img src="/images/m6.jpg" class="img-responsive" alt=""/>
+				     <h3>parum clari</h3>
+				   	 <p>Duis autem vel eum iriure</p>
+				   	 <h4>Rs.399</h4>
+			     </div> 
+				 <div class="col-sm-3 span_4">
+	          	     <img src="/images/m1.jpg" class="img-responsive" alt=""/>
+				     <h3>parum clari</h3>
+				   	 <p>Duis autem vel eum iriure</p>
+				   	 <h4>Rs.399</h4>
+			      </div> 
+				  <div class="col-sm-3 span_4">
+	          	     <img src="/images/pic7.jpg" class="img-responsive" alt=""/>
+				     <h3>parum clari</h3>
+				   	 <p>Duis autem vel eum iriure</p>
+				   	 <h4>Rs.399</h4>
+			      </div> 
+				  <div class="col-sm-3 span_4">
+	          	     <img src="/images/pic8.jpg" class="img-responsive" alt=""/>
+				     <h3>parum clari</h3>
+				   	 <p>Duis autem vel eum iriure</p>
+				   	 <h4>Rs.399</h4>
+			      </div> 
+				  <div class="clearfix"></div>
+	     </div>
+    </div>
+
+    	<!-- 尾部 -->
+	<footer></footer>
+   </div>
+</div>	
+<link href="/css/flexslider.css" rel='stylesheet' type='text/css' />
+
+
+
+<!-- 详情模板 -->
+<script type="text/html" id="detail-template">
+	<div class="men prod-detail" data-id="{{prod.id}}">
+	  <div class="single_top">
+	       <div class="col-md-9 single_right">
+	       		<!-- 放大镜 -->
+	   	       <div class="grid images_3_of_2">
+				<img src="{{prod.photos[0].url}}" class="prod-img" alt="" style="width: 300px;" data-zoom-image="{{prod.photos[0].url}}">
+				<div id="gallery">
+					{{each prod.photos photo}}
+					<a href="#" data-image="{{photo.url}}" data-zoom-image="{{photo.url}}">
+						<img src="{{photo.url}}" alt="" style="width: 60px;">
+					</a>
+					{{/each}}
+				</div>
+			</div> 
+			<!-- 放大镜 -->
+			  <div class="desc1 span_3_of_2">
+			 	<h1 class="prod-title">{{prod.title}}</h1>
+				<p class="m_5">售价：<span class="prod-price">{{prod.price}}</span></p>
+				<div class="btn_form">
+			    		<!-- 加入购物车按钮 -->
+					<form class="form-add-to-cart">
+						<input type="submit" value="加入购物车" title="">
+					</form>
+				</div>
+				 <span class="m_link">原价：{{prod.originPrice}}</span>
+				 <p class="m_text2">折扣价：{{prod.price}}</p>
+			  </div>
+			  <div class="clearfix"></div>	
+       </div>
+      <div class="clearfix"> </div>
+     </div>
+       <div class="toogle">
+     	<h2>商品详情：</h2>
+     	<p class="m_text2"> 
+		{{each prod.descContentList content}}
+			{{if content.photo}}
+				<div><img src="{{content.photo.url}}" alt=""></div>
+			{{/if}}
+		{{/each}}
+     	</p>
+     </div>
+     </div>
+</script>
+
+</body>
+</html>		

@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Men</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/css/style.css" rel='stylesheet' type='text/css' />
+<link href="/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="/libs/requirejs/require.js" data-main="/js/list"></script>
+
+</head>
+<body>
+<div class="wrap">	
+<div class="container">
+     <!-- 复用头部 -->
+     <header></header>
+<div class="content">
+  <div class="content_box">
+	<div class="men">
+	  <div class="col-md-3 sidebar">
+	  	<div class="block block-layered-nav">
+		    <div class="block-title">
+		        <strong><span>Shop By</span></strong>
+		    </div>
+    <div class="block-content">
+                                    
+            <dl id="narrow-by-list">
+                                                                                                    <dt class="odd">processus</dt>
+                    <dd class="odd">
+<ol>
+    <li>
+                <a href="#"><span class="price1">US$&nbsp;0,00</span> - <span class="price1">US$&nbsp;99,99</span></a>
+                        (4)
+            </li>
+    <li>
+                <a href="#"><span class="price1">US$&nbsp;100,00</span> - <span class="price1">US$&nbsp;199,99</span></a>
+                        (4)
+            </li>
+    <li>
+                <a href="#"><span class="price1">US$&nbsp;200,00</span> - <span class="price1">US$&nbsp;299,99</span></a>
+                        (1)
+            </li>
+    <li>
+                <a href="#"><span class="price1">US$&nbsp;400,00</span> - <span class="price1">US$&nbsp;499,99</span></a>
+                        (1)
+            </li>
+    <li>
+                <a href="#"><span class="price1">US$&nbsp;800,00</span> and above</a>
+                        (1)
+            </li>
+</ol>
+</dd>
+                                                                    <dt class="even">Manufacturer</dt>
+                    <dd class="even">
+<ol>
+    <li>
+                <a href="#">Calvin Klein</a>
+                        (2)
+            </li>
+    <li>
+                <a href="#">Diesel</a>
+                        (1)
+            </li>
+    <li>
+                <a href="#">Polo</a>
+                        (1)
+            </li>
+    <li>
+                <a href="#">Tommy Hilfiger</a>
+                        (1)
+            </li>
+    <li>
+                <a href="#">Versace</a>
+                        (1)
+            </li>
+</ol>
+</dd>
+                                                                    <dt class="last odd">Color</dt>
+                    <dd class="last odd">
+<ol>
+    <li>
+        Black                        (0)
+            </li>
+    <li>
+                <a href="#">Blue</a>
+                        (2)
+            </li>
+    <li>
+                <a href="#">Green</a>
+                        (1)
+            </li>
+    <li>
+                <a href="#">Grey</a>
+                        (1)
+            </li>
+    <li>
+                <a href="#">Red</a>
+                        (1)
+            </li>
+    <li>
+                <a href="#">White</a>
+                        (1)
+            </li>
+</ol>
+</dd>
+                                            </dl>
+           
+            </div>
+</div>
+<div class="block block-cart">
+        <div class="block-title">
+        <strong><span>Carrello</span></strong>
+    </div>
+    <div class="block-content">
+                        <p class="empty">You have no items in your shopping cart.</p>
+        </div>
+</div>
+<div class="block block-list block-compare">
+    <div class="block-title">
+        <strong><span>Compare Products                    </span></strong>
+    </div>
+    <div class="block-content">
+            <p class="empty">You have no items to compare.</p>
+        </div>
+</div>
+</div>
+<div class="col-md-9">
+	<div class="mens-toolbar">
+          <div class="sort">
+               	<div class="sort-by">
+		            <label>Sort By</label>
+		            <select>
+		                            <option value="">
+		                    Popularity               </option>
+		                            <option value="">
+		                    Price : High to Low               </option>
+		                            <option value="">
+		                    Price : Low to High               </option>
+		            </select>
+		        </div>
+    		</div>
+	        <div class="pager">   
+	           <div class="limiter visible-desktop">
+	            <label>Show</label>
+	            <select>
+	                            <option value="" selected="selected">
+	                    9                </option>
+	                            <option value="">
+	                    15                </option>
+	                            <option value="">
+	                    30                </option>
+	                        </select> per page        
+	             </div>
+	       		<ul class="dc_pagination dc_paginationA dc_paginationA06">
+				    <li><a href="#" class="previous">Pages</a></li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+			  	</ul>
+		   		<div class="clearfix"></div>
+	    	</div>
+     	    <div class="clearfix"></div>
+	     </div>
+	     <!-- 商品列表布局结构 -->
+	        <div class="span_2 prod_list">
+	          	
+		</div>
+            </div>
+          <div class="clearfix"> </div>
+    </div>
+
+    <!-- 复用尾部 -->
+	<footer></footer>
+	
+   </div>
+</div>
+
+<!-- 商品列表模板 -->
+<script type="text/html" id="list-template">
+	{{each products prod}}
+	<div class="col_1_of_single1 span_1_of_single1">
+	   <a href="/html/detail.html?id={{prod.id}}">
+	     <img src="{{prod.image}}" class="img-responsive" alt=""/>
+	     <h3>{{prod.title}}</h3>
+	   	 <h4>{{prod.price}}</h4>
+	  </a>
+	</div>
+	{{/each}}
+</script>
+	<!-- <% for (var i = 0, len = products.length; i < len; i++) { var prod = products[i]; %>
+	<div class="col_1_of_single1 span_1_of_single1">
+	   <a href="/html/detail.html">
+	     <img src="<%= prod.img %>" class="img-responsive" alt=""/>
+	     <h3><%= prod.title %></h3>
+	   	 <p><%= prod.subtitle %></p>
+	   	 <h4><%= prod.price %></h4>
+	  </a>
+	</div>
+	<% } %> -->
+
+</body>
+</html>		
